@@ -47,9 +47,8 @@ public class Employee {
     }
 
     public double increaseSalary(double salary, double porcentage){
-        porcentage = porcentage/100;
-        double aumento = this.salary;
-        aumento += this.salary * porcentage;
+        double aumento = this.salary * (porcentage = porcentage/100);
+        this.salary += aumento;
         return aumento;
     }
 }

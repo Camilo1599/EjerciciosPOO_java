@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Porfavor ingresa el porcentaje de aumento: ");
         double porcentage = scanner.nextDouble();
 
-        System.out.println(empleado1.increaseSalary(salary, porcentage));
-        
+        System.out.println("El nuevo salario es: " + empleado1.increaseSalary(salary, porcentage));
+        scanner.close();   
     }
 }
