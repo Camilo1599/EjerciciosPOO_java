@@ -3,29 +3,42 @@ import java.util.ArrayList;
 
 public class Inventory {
     
-    private ArrayList<Product> products;
+    private ArrayList<SpecificProduct> products;
 
     public Inventory(){
         products = new ArrayList<>();
     }
 
-    public void addProduct(Product product){
+    public void addProduct(SpecificProduct product){
         products.add(product);
     }
 
-    public void removeProduct(Product product){
+    public void removeProduct(SpecificProduct product){
         products.remove(product);
     }
 
-    public ArrayList<Product> obtainProducts(){
+    public ArrayList<SpecificProduct> obtainProducts(){
         return products;
     }
 
-    public void searchName(String name){
+    public SpecificProduct searchName(String name){
+        for(SpecificProduct product : products){
+            if (product.getName().equalsIgnoreCase(name)) {
+                return product;
+            }
+
+        }
+        return null;
 
     }
 
-    public void searchCategory(String category){
+    public SpecificProduct searchCategory(String category){
+        for(SpecificProduct product : products){
+            if (product.getCategory().equalsIgnoreCase(category)) {
+                return product;
+            }
 
+        }
+        return null;
     }
 }
