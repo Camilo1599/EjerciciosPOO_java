@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Inventory {
     
-    private ArrayList<SpecificProduct> products;
+    private final ArrayList<SpecificProduct> products;
 
     public Inventory(){
         products = new ArrayList<>();
